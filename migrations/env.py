@@ -9,7 +9,7 @@ from alembic import context
 # access to the values within the .ini file in use.
 
 from config import DB_HOST, DB_NAME, DB_PASS, DB_PORT, DB_USER
-from ServiceStore.src.store.model import metadata
+from src.store.model import metadata
 
 config = context.config
 
@@ -19,7 +19,6 @@ config.set_section_option(section, 'DB_PASS', DB_PASS)
 config.set_section_option(section, 'DB_USER', DB_USER)
 config.set_section_option(section, 'DB_NAME', DB_NAME)
 config.set_section_option(section, 'DB_PORT', DB_PORT)
-
 
 # Interpret the config file for Python logging.
 # This line sets up loggers basically.
@@ -31,6 +30,7 @@ if config.config_file_name is not None:
 # from myapp import mymodel
 # target_metadata = mymodel.Base.metadata
 target_metadata = metadata
+
 
 # other values from the config, defined by the needs of env.py,
 # can be acquired:
