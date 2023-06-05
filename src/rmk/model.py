@@ -1,5 +1,3 @@
-from pydantic import BaseModel
-
 from sqlalchemy import Table, Column, Integer, String, ForeignKey, Boolean, MetaData
 
 metadata = MetaData()
