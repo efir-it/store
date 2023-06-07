@@ -11,9 +11,10 @@
 # )
 
 from sqlalchemy import Column, Integer, String, ForeignKey, Boolean
-from sqlalchemy.orm import declarative_base, relationship
+from sqlalchemy.orm import relationship
+from ..database import Base
 
-Base = declarative_base()
+# Base = declarative_base()
 
 
 class Rmk(Base):

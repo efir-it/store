@@ -18,8 +18,8 @@
 
 from sqlalchemy import Column, Integer, String, ForeignKey, Boolean
 from sqlalchemy.orm import declarative_base, relationship
-
-Base = declarative_base()
+from ..database import Base
+# Base = declarative_base()
 
 
 class Store(Base):

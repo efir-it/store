@@ -22,9 +22,9 @@
 # )
 from sqlalchemy import Boolean, Column, ForeignKey, Integer, String, Table
 from sqlalchemy.orm import relationship
-from sqlalchemy.ext.declarative import declarative_base
-
-Base = declarative_base()
+# from sqlalchemy.ext.declarative import declarative_base
+from ..database import Base
+# Base = declarative_base()
 
 drivers_devices = Table(
     "drivers_devices",

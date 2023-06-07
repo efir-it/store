@@ -19,8 +19,8 @@
 from sqlalchemy import Column, Integer, String, Boolean, ForeignKey
 from sqlalchemy.orm import declarative_base, relationship
 from ..drivers.model import drivers_devices
-
-Base = declarative_base()
+from ..database import Base
+# Base = declarative_base()
 
 
 class Devices(Base):
