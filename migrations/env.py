@@ -3,16 +3,22 @@ import sys
 from logging.config import fileConfig
 
 from alembic import context
+from setuptools import setup, find_packages
 from sqlalchemy import engine_from_config
 from sqlalchemy import pool
 
-from ..src.database import Base
+setup(
+    name='core',
+    packages=find_packages(),
+)
 
-sys.path.append(os.path.join(sys.path[0], 'src'))
+sys.path.append(os.path.dirname(os.path.realpath(__file__)))
 
-from ..src.config import DB_HOST, DB_NAME, DB_PASS, DB_PORT, DB_USER
+from core.settings import Base
 
-# from src.type_device.model import metadata as metadata_type_device
+from core.config import DB_HOST, DB_NAME, DB_PASS, DB_PORT, DB_USER
+
+# from ..src.type_device.model import Base as metadata_type_device
 # from src.devices.model import metadata as metadata_devices
 # from ..src.drivers.model import metadata as metadata_drivers
 # from src.quantity_products.model import metadata as metadata_quantity_products

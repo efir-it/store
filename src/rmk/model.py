@@ -10,9 +10,9 @@
 #     Column('store_id', Integer, ForeignKey('store.id')),
 # )
 
-from sqlalchemy import Column, Integer, String, ForeignKey, Boolean
+from sqlalchemy import Column, Integer, String, ForeignKey
 from sqlalchemy.orm import relationship
-from ..database import Base
+from ServiceStore.core.database import Base
 
 # Base = declarative_base()
 

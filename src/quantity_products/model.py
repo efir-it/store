@@ -15,10 +15,10 @@
 #
 
 
-from sqlalchemy import MetaData, Integer, String, Table, Column, Boolean, Float, ForeignKey
+from sqlalchemy import Integer, String, Column, Float, ForeignKey
 from sqlalchemy.orm import relationship
 # from sqlalchemy.ext.declarative import declarative_base
-from ..database import Base
+from ServiceStore.core.database import Base
 
 
 class QuantityProducts(Base):

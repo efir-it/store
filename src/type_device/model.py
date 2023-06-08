@@ -13,10 +13,12 @@
 #
 
 
-from sqlalchemy import Boolean, Column, ForeignKey, Integer, String
+from sqlalchemy import Column, Integer, String
+from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import relationship
+from core.database import Base
 # from sqlalchemy.ext.declarative import declarative_base
-from ..database import Base
+# from ServiceStore.core.database import Base
 # Base = declarative_base()
 
 

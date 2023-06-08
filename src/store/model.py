@@ -16,9 +16,9 @@
 # )
 #
 
-from sqlalchemy import Column, Integer, String, ForeignKey, Boolean
-from sqlalchemy.orm import declarative_base, relationship
-from ..database import Base
+from sqlalchemy import Column, Integer, String
+from sqlalchemy.orm import relationship
+from ServiceStore.core.database import Base
 # Base = declarative_base()
 
 
