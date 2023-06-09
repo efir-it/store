@@ -21,10 +21,9 @@
 #     Column('drivers_id', Integer, ForeignKey('drivers.id')),
 # )
 from sqlalchemy import Column, ForeignKey, Integer, String, Table
-from sqlalchemy.orm import relationship
-# from sqlalchemy.ext.declarative import declarative_base
-from ServiceStore.core.database import Base
-# Base = declarative_base()
+from sqlalchemy.orm import relationship, declarative_base
+
+Base = declarative_base()
 
 drivers_devices = Table(
     "drivers_devices",

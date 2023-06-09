@@ -14,12 +14,8 @@
 
 
 from sqlalchemy import Column, Integer, String
-from sqlalchemy.ext.declarative import declarative_base
-from sqlalchemy.orm import relationship
-from core.database import Base
-# from sqlalchemy.ext.declarative import declarative_base
-# from ServiceStore.core.database import Base
-# Base = declarative_base()
+from sqlalchemy.orm import relationship, declarative_base
+Base = declarative_base()
 
 
 class TypeDevice(Base):

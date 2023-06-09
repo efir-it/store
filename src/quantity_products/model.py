@@ -16,10 +16,9 @@
 
 
 from sqlalchemy import Integer, String, Column, Float, ForeignKey
-from sqlalchemy.orm import relationship
+from sqlalchemy.orm import relationship, declarative_base
 # from sqlalchemy.ext.declarative import declarative_base
-from ServiceStore.core.database import Base
-
+Base = declarative_base()
 
 class QuantityProducts(Base):
     __tablename__ = 'quantity_products'

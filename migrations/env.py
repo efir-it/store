@@ -18,12 +18,12 @@ from core.database import Base, metadata
 
 from core.config import DB_HOST, DB_NAME, DB_PASS, DB_PORT, DB_USER
 
-# from ..src.type_device.model import Base as metadata_type_device
-# from src.devices.model import metadata as metadata_devices
-# from ..src.drivers.model import metadata as metadata_drivers
-# from src.quantity_products.model import metadata as metadata_quantity_products
-# from src.rmk.model import metadata as metadata_rmk
-# from src.store.model import metadata as metadata_store
+# from src.type_device.model import Base as metadata_type_device
+# from src.devices.model import Base as metadata_devices
+# from src.drivers.model import Base as metadata_drivers
+# from src.quantity_products.model import Base as metadata_quantity_products
+# from src.rmk.model import Base as metadata_rmk
+# from src.store.model import Base as metadata_store
 
 # this is the Alembic Config object, which provides
 # access to the values within the .ini file in use.
@@ -47,6 +47,8 @@ if config.config_file_name is not None:
 # target_metadata = mymodel.Base.metadata
 # target_metadata = [metadata_type_device, metadata_devices, metadata_drivers, metadata_quantity_products, metadata_rmk,
 #                    metadata_store]
+
+
 target_metadata = [Base, metadata]
 
 
