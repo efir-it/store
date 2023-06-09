@@ -14,7 +14,7 @@ setup(
 
 sys.path.append(os.path.dirname(os.path.realpath(__file__)))
 
-from core.settings import Base
+from core.database import Base, metadata
 
 from core.config import DB_HOST, DB_NAME, DB_PASS, DB_PORT, DB_USER
 
@@ -47,7 +47,7 @@ if config.config_file_name is not None:
 # target_metadata = mymodel.Base.metadata
 # target_metadata = [metadata_type_device, metadata_devices, metadata_drivers, metadata_quantity_products, metadata_rmk,
 #                    metadata_store]
-target_metadata = Base.metadata
+target_metadata = [Base, metadata]
 
 
 # other values from the config, defined by the needs of env.py,
